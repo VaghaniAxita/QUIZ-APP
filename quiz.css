@@ -360,3 +360,110 @@ body
     padding: 0 4px;
     font-weight: 700;
 }
+
+
+
+/* Mobile size (up to 480px) */
+@media (max-width: 480px) {
+    .rules_Box,
+    .quiz_Box,
+    .result_Box {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .rules_Box .rules_title,
+    .quiz_Box .title,
+    .quiz_Box .questions_List {
+        font-size: 18px;
+    }
+
+    .quiz_Box section .options_list .option {
+        font-size: 15px;
+        padding: 8px 10px;
+    }
+
+    .quiz_Box footer button,
+    .result_Box .buttons button {
+        width: 80px;
+        font-size: 14px;
+    }
+
+    .result_Box {
+        width: 90%;
+    }
+
+    .result_Box .complete_text {
+        font-size: 18px;
+    }
+}
+
+/* Tablet size (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .rules_Box,
+    .quiz_Box,
+    .result_Box {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .rules_Box .rules_title,
+    .quiz_Box .title,
+    .quiz_Box .questions_List {
+        font-size: 20px;
+    }
+
+    .quiz_Box section .options_list .option {
+        font-size: 16px;
+        padding: 10px 12px;
+    }
+
+    .quiz_Box footer button,
+    .result_Box .buttons button {
+        width: 85px;
+        font-size: 15px;
+    }
+
+    .result_Box {
+        width: 80%;
+    }
+
+    .result_Box .complete_text {
+        font-size: 19px;
+    }
+}
+
+/* Laptop size (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .rules_Box,
+    .quiz_Box,
+    .result_Box {
+        width: 70%;
+        padding: 25px;
+    }
+
+    .rules_Box .rules_title,
+    .quiz_Box .title,
+    .quiz_Box .questions_List {
+        font-size: 22px;
+    }
+
+    .quiz_Box section .options_list .option {
+        font-size: 17px;
+        padding: 12px 15px;
+    }
+
+    .quiz_Box footer button,
+    .result_Box .buttons button {
+        width: 90px;
+        font-size: 16px;
+    }
+
+    .result_Box {
+        width: 70%;
+    }
+
+    .result_Box .complete_text {
+        font-size: 20px;
+    }
+}
