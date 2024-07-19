@@ -1,0 +1,362 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    background-color:rgb(114, 148, 206);
+}
+
+.start_btn,
+.rules_Box,
+.quiz_Box,
+.result_Box
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.rules_Box.activeRule,
+.quiz_Box.activeQuiz,
+.result_Box.activeResult
+{
+    z-index: 5;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    pointer-events: auto; 
+}
+
+.start_btn button
+{
+    font-size: 23px;
+    font-weight: 600;
+    font-family:'Franklin Gothic Medium';
+    color: rgb(102, 136, 198);
+    background-color:white;
+    padding: 20px 20px;
+    border: 2px;
+    cursor: pointer;
+    box-shadow: 2px;
+    border-radius: 20px;
+}
+
+.rules_Box
+{
+    background-color: whitesmoke;
+    border: 2px;
+    width: 550px;
+    border-radius: 5px;
+    padding: 20px 20px 20px 40px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rules_Box .rules_title
+{
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid lightslategray;
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.rules_Box .rules_list
+{
+    margin: 15px 5px;
+}
+
+.rules_Box .rules_info
+{
+    padding: 4px;
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.rules_Box .rules_info span
+{
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(114, 148, 206);
+}
+
+.rules_Box .buttons
+{
+    border-top: 1px solid lightslategray ;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.rules_Box .buttons button
+{
+    font-size: 15px;
+    font-weight: 600;
+    font-family:'Franklin Gothic Medium';
+    color: white;
+    background-color: rgb(114, 148, 206);
+    padding: 10px 10px;
+    margin: 5px;
+    border: 2px;
+    cursor: pointer;
+    box-shadow: 2px;
+    border-radius: 20px;
+}
+
+.quiz_Box
+{
+    background-color: whitesmoke;
+    border: 2px;
+    width: 550px;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.quiz_Box header
+{
+    height: 70px;
+    padding: 10px 30px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px 5px 0 0;
+}
+
+.quiz_Box .title
+{
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.quiz_Box .timer
+{
+    color: #004085;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+    height: 45px;
+    padding: 0 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+}  
+
+.quiz_Box .timer .time_text{
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+}
+
+.quiz_Box .timer .time_sec{
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background: #343a40;
+    border: 1px solid #343a40;
+    user-select: none;
+}
+
+.quiz_Box section
+{
+    padding: 25px 30px 20px 30px;
+}
+
+.quiz_Box section .questions_List
+{
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    font-weight: 600;
+    font-size: 23px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.quiz_Box section .options_list{
+    padding: 15px 0px;
+    display: block;   
+}
+
+.quiz_Box section .options_list .option{
+    background: aliceblue;
+    border: 1px solid #84c5fe;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 17px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz_Box section .options_list .option:last-child{
+    margin-bottom: 0px;
+}
+
+.quiz_Box section .options_list .option .icon{
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    line-height: 24px;
+}
+
+.quiz_Box section .options_list .option .icon.tick{
+    color: #23903c;
+    border-color: #23903c;
+    background: #d4edda;
+}
+
+.quiz_Box section .options_list .option .icon.cross{
+    color: #a42834;
+    background: #f8d7da;
+    border-color: #a42834;
+}
+
+.quiz_Box section .options_list .option:hover{
+    color: #004085;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+}
+
+.quiz_Box section .options_list .option.correct{
+    color: #0b3a16;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.quiz_Box section .options_list .option.incorrect{
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.quiz_Box section .options_list .option.disabled{
+    pointer-events: none;
+}
+
+.quiz_Box footer{
+    height: 60px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid lightgrey;
+}
+
+.quiz_Box footer .total_que span{
+    display: flex;
+    user-select: none;
+}
+
+.quiz_Box footer .total_que span p{
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+.quiz_Box footer .total_que span p:first-child{
+    padding-left: 0px;
+}
+
+.quiz_Box footer button{
+    font-size: 17px;
+    width: 90px;
+    font-weight: 600;
+    font-family:'Franklin Gothic Medium';
+    color: white;
+    background-color:rgb(114, 148, 206);
+    padding: 10px 10px;
+    margin: 10px;
+    border: 2px;
+    cursor: pointer;
+    box-shadow: 2px;
+    border-radius: 20px;
+}
+
+.result_Box
+{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    display: flex;
+    padding: 25px 30px;
+    width: 450px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.result_Box .icon{
+    font-size: 100px;
+    color:rgb(114, 148, 206) ;
+    margin-bottom: 10px;
+}
+
+.result_Box .complete_text{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.result_Box .score_text span{
+    display: flex;
+}
+
+.result_Box .buttons
+{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.result_Box .buttons button
+{
+    font-size: 15px;
+    font-weight: 600;
+    font-family:'Franklin Gothic Medium';
+    color: white;
+    background-color: rgb(114, 148, 206);
+    padding: 10px 10px;
+    margin: 5px;
+    border: 2px;
+    cursor: pointer;
+    box-shadow: 2px;
+    border-radius: 20px;
+}
+
+.result_Box .score_text span p{
+    padding: 0 4px;
+    font-weight: 700;
+}
