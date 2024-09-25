@@ -244,10 +244,10 @@ let totalQuestionTag = '<span><p>'+ index + '</p> of <p>' + questions.length +'<
 bottom_que_counter.innerHTML = totalQuestionTag;
 }
 
-restart_quiz.onclick = () =>
-{
-window.location.reload();
-}
+// restart_quiz.onclick = () =>
+// {
+// window.location.reload();
+// }
 
 quit_quiz.onclick = () =>
 {
